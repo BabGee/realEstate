@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'globalbiz',
     'users',
     'crispy_forms',
+    'product',
+    'category',
 ]
 
 MIDDLEWARE = [
