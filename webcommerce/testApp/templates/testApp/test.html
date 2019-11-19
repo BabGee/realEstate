@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %} Home Global Biz {% endblock title %}
+{% block title %} Test {% endblock title %}
 
 
 {% block content  %}
@@ -17,7 +17,7 @@
             <h1 class="my-4">Global Biz</h1>
             {% for category in categories %}
             <div class="list-group">
-                <a href="#" class="list-group-item">{{category.name}}</a>
+                <a href="{{category.url}}" class="list-group-item">{{category.name}}</a>
             </div>
             {% endfor %}        
         </div>
@@ -64,29 +64,6 @@
                 {% endfor %}
            
                </div><!-- /.container -->
-
-            <!--<div class="row">
-
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100">
-                        {% for product in products %}
-                        <a href="#"><img class="card-img-top" src="{% static 'globalbiz/images/del.jpg' %}" alt=""></a>
-                        <div class="card-body">
-                            <h4 class="card-title">
-                                <a href="#">{{product.name}}</a>
-                            </h4>
-                            <h5>Kshs {{product.price}}</h5>
-                            <p class="card-text">{{product.description}}!</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>-->
-            <!-- /.row -->
-
         </div>
         <!-- /.col-lg-9 -->
 
