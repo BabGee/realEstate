@@ -7,4 +7,4 @@ def home(request):
         'categories': Category.objects.all(),
         'products' : Product.objects.all()
     }
-    return render(request, 'globalbiz/index.html', context)
+    return render(request, 'globalbiz/base.html', context)

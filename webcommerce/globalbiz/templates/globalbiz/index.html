@@ -56,8 +56,9 @@
                 {% for product in products %}
                  <div class="col-lg-4">
                     <a href="#"><img class="card-img-top" src="{{product.image.url}}" alt="" height="150" width="70"></a>
-                   <p>{{product.title}}</p>
-                   <p>KSHS {{ product.price }}</p>
+                   <p>{{product.get_category_display}}</p>
+                   <p class="dark-grey-text">{{product.title}}</p>
+                   <p class="font-weight-bold blue-text">KSHS {{ product.price }}</p>
                    <p>{{product.description}}</p>
                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Add to cart</a></p>
                 </div><!-- /.col-sm-3 -->
