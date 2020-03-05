@@ -1,9 +1,3 @@
-# loxpack
-
-hosted at http://babgee.pythonanywhere.com/
-
-
-
 
 
 **globalbiz** is a real estate agency web application written in Python 3 and using Django framework.
@@ -18,11 +12,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 You will find hereafter what I use to develop and to run the project
 * Python 3.8
-* Django 3.0.3
+* Django 3.0.4
 * Virtualenv (not mandatory but highly recommended)
 
 ### Installing
-Get a local copy of the project directory by cloning "loxpack" from github. `git clone https://github.com/BabGee/loxpack.git`
+Get a local copy of the project directory by cloning "loxpack" from github. `git clone https://github.com/BabGee/realEstate.git`
 I use Virtualenv for developing this project so I recommend you to create a virtual environment, `virtualenv venv`, activate the virtual environment `source venv/Scripts/activate`  and to install the requirements `pip install -r requirements.txt`.
 
 Then follow these steps:
