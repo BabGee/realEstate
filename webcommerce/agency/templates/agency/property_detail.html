@@ -1,0 +1,120 @@
+{% extends 'agency/base.html' %}
+
+{% load static %}
+{% load humanize %}
+
+{% block content %}
+
+   <!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_1">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="bradcam_text">
+                    <h3>{{property.name}}</h3>
+                    <p> <a href="/">Home</a> /{{property.name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--/ bradcam_area  -->
+
+<main class="mt-5 pt-4">
+    <div class="container dark-grey-text mt-5">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+  
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+  
+            <img src="{{property.image.url}}" class="img-fluid" alt="" height=300 width=400>
+            
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-md-6 mb-4">
+  
+            <!--Content-->
+            <div class="p-4">
+  
+              <div class="mb-3">
+                <a href="">
+                  <span class="badge purple mr-1">{{ property.name}}</span>
+                </a>
+              </div>
+  
+              <p class="lead">
+                <span>Kshs {{ property.price|intcomma }}</span>
+              </p>
+  
+              <p class="lead font-weight-bold">Description</p>
+  
+              <p>{{ property.description }}</p>
+  
+              <div class="faded">
+                <p class="mb-0"><a href="{% url 'agency-property' pk=property.pk %}" class="btn btn-secondary px-4 py-3">Check Details</a></p>
+              </div>
+  
+            </div>
+            <!--Content-->
+  
+          </div>
+          <!--Grid column-->
+  
+        </div>
+        <!--Grid row-->
+  
+        <hr>
+    </div>
+
+    <div class="container dark-grey-text mt-5">
+
+        <!--Grid row   {{property.status}}-->
+        <div class="text-center mb-5">
+          <h1>Similar Properties </h1>
+        </div>
+        <div class="row wow fadeIn">
+          <!--Grid column-->
+          {% for status in status %}
+          <div class="col-md-6 mb-4">
+            <a href="{% url 'agency-property' pk=status.pk %}">
+              <img src="{{status.image.url}}" class="img-fluid" alt="" height=300 width=400>  
+            </a>
+            <div class="p-4">
+  
+              <div class="mb-3">
+                <a href="{% url 'agency-property' pk=status.pk %}">
+                  <span class="badge purple mr-1">{{status.name}}</span>
+                </a>
+              </div>
+  
+              <p>{{status.description}}</p>
+  
+              <div class="faded">
+                <p class="mb-0"><a href="{% url 'agency-property' pk=status.pk %}" class="btn btn-secondary px-4 py-3">Check Details</a></p>
+              </div>
+  
+            </div>
+            <!--Content-->
+  
+          </div>
+          {% endfor %}
+          <!--Grid column-->
+  
+  
+        </div>
+        <!--Grid row-->
+  
+        <hr>
+      </div>
+
+</main>
+
+
+
+
+
+{% endblock content %}

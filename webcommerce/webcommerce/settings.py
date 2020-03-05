@@ -38,13 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #my apps
-    #'globalbiz.apps.GlobalbizConfig',
-    'globalbiz',
+    'agency.apps.AgencyConfig',
+    'property.apps.PropertyConfig',
     'users',
     'crispy_forms',
-    'product',
-    'category',
-    'testApp',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
